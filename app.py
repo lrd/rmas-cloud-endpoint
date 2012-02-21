@@ -13,8 +13,8 @@ from rpclib.server.wsgi import WsgiApplication
 
 class MessageService(ServiceBase):
     @srpc(String, Integer, _returns=Iterable(String))
-    def send_message(name):
-        yield 'Your message: %s' % name
+    def send_message(msg):
+        yield 'Your message: %s' % msg
 
 if __name__=='__main__':
     try:
