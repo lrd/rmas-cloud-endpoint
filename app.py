@@ -30,9 +30,9 @@ if __name__=='__main__':
 
     port = int(os.environ.get('PORT', 5000))
 
-    server = make_server('127.0.0.1', port, WsgiApplication(application))
+    server = make_server('0.0.0.0', port, WsgiApplication(application))
 
-    print "listening to http://127.0.0.1:%s" % port
-    print "wsdl is at: http://127.0.0.1:%s/?wsdl" % port
+    print "listening to http://0.0.0.0:%s" % port
+    print "wsdl is at: http://0.0.0.0:%s/?wsdl" % port
 
     server.serve_forever()
