@@ -20,7 +20,7 @@ if __name__=='__main__':
     try:
         from wsgiref.simple_server import make_server
     except ImportError:
-        print "Error: example server code requires Python >= 2.5"
+        print "Error: server requires Python >= 2.5"
 
     logging.basicConfig(level=logging.INFO)
     logging.getLogger('rpclib.protocol.xml').setLevel(logging.DEBUG)
